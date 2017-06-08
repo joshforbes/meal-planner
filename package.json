@@ -1,0 +1,30 @@
+{
+  "name": "meal-planner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "mocha",
+    "migrate": "knex --knexfile database/config.js migrate:latest --cwd ./",
+    "rollback": "knex --knexfile database/config.js --cwd ./ migrate:rollback"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.2",
+    "knex": "^0.13.0",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "mysql": "^2.13.0",
+    "objection": "^0.7.12"
+  },
+  "devDependencies": {
+    "chai": "^4.0.1",
+    "mocha": "^3.4.2",
+    "nodemon": "^1.11.0",
+    "sqlite3": "^3.1.8"
+  }
+}
